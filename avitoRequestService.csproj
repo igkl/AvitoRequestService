@@ -6,9 +6,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="HtmlAgilityPack" Version="1.8.7" />
+    <PackageReference Include="HtmlAgilityPack" Version="1.9.1" />
     <PackageReference Include="LiteDB" Version="4.1.4" />
-    <PackageReference Include="VkNet" Version="1.37.1" />
+    <PackageReference Include="VkNet" Version="1.43.0" />
   </ItemGroup>
 
 

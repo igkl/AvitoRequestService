@@ -30,18 +30,31 @@ namespace avitoRequestService
 
         static void Main(string[] args)
         {
+            Random rand = new Random();
             api.Authorize(new ApiAuthParams
             {
-                ApplicationId = 6613950,
-                Login = "79185584046",
-                Password = "1v3.4c@&$",
-                Settings = Settings.All
+               // ApplicationId = 6613950,
+                AccessToken = "13a3ebad7659c3a4e7a282228f6f98139605fc9d518a871632b93291b254de06d1611b48a04d85633d6eb"
+                //Login = "79185584046",
+                //Password = "1v3.4c@&$",
+                //Settings = Settings.All
             });
+            Console.WriteLine(api.Token);
+            //var res = api.Groups.Get(new GroupsGetParams());
 
+            // Console.WriteLine(res.TotalCount);
+            //api.Messages.Send(new MessagesSendParams { RandomId = new Random().Next(int.MinValue, int.MaxValue), PeerId=12335360, GroupId = 179597981, Message = "test" });
+            // api.Wall.Post(new WallPostParams
+            // {
+            //     OwnerId =-179597981,
+            //     FromGroup =true,
+            //     Message = "test"
+
+            // });
             while (true)
             {
                 ProcessRequestToAvito().Wait();
-                Thread.Sleep(50000);
+                Thread.Sleep(rand.Next(45000, 60000));
             }
 
         }
@@ -55,7 +68,7 @@ namespace avitoRequestService
         {
 
             // DateTime dateTimeFromString;
-            var request = new HttpRequestMessage(HttpMethod.Get, "https://www.avito.ru/rostov-na-donu/telefony/iphone?s=104");
+            var request = new HttpRequestMessage(HttpMethod.Get, "https://www.avito.ru/rostov-na-donu/telefony/iphone?s=104&s_trg=3");
             request.Headers.Clear();
             request.Headers.Add("Accept", "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8");
             request.Headers.Add("User-Agent", "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.13; rv:60.0) Gecko/20100101 Firefox/60.0");
@@ -69,7 +82,7 @@ namespace avitoRequestService
                 }
                 catch (HttpRequestException)
                 {
-                    Thread.Sleep(30000);
+                    Thread.Sleep(50000);
 
                     //response = await client.GetAsync(request.RequestUri);
 
@@ -99,7 +112,7 @@ namespace avitoRequestService
 
                             var id = node.Id;
                             var link = node.SelectSingleNode(Selectors.link).GetAttributeValue("href", null);//.ChildNodes[1].ChildNodes[1].GetAttributeValue("href", null);
-                            var name = node.SelectSingleNode(Selectors.name).InnerText;
+                            var name = node.SelectSingleNode(Selectors.name).GetAttributeValue("title", null);
                             var price = node.SelectSingleNode(Selectors.price).GetAttributeValue("content", "Цена не указанна"); ;
 
                             var position = node.GetAttributeValue("data-position", null);
@@ -148,7 +161,8 @@ namespace avitoRequestService
 
                             try
                             {
-                                var send = api.Messages.Send(new MessagesSendParams { UserId = 170726879, Message = sb.ToString() });
+                                var send = api.Messages.Send(new MessagesSendParams {RandomId = new Random().Next(int.MinValue, int.MaxValue), UserId = 170726879, Message = sb.ToString() });
+                                //api.Wall.Post(new WallPostParams {  OwnerId =-179597981, Message = sb.ToString() });
 
                             }
                             catch (VkNet.Exception.UserAuthorizationFailException)
@@ -156,13 +170,16 @@ namespace avitoRequestService
                                 Console.WriteLine("TOKEN EXEPTION");
                                 api.Authorize(new ApiAuthParams
                                 {
-                                    ApplicationId = 6613950,
-                                    Login = "79185584046",
-                                    Password = "1v3.4c@&$",
-                                    Settings = Settings.All
+                                    AccessToken = "13a3ebad7659c3a4e7a282228f6f98139605fc9d518a871632b93291b254de06d1611b48a04d85633d6eb"
+                                    // ApplicationId = 6613950,
+                                    // Login = "79185584046",
+                                    // Password = "1v3.4c@&$",
+                                    // Settings = Settings.All
                                 });
 
-                                var send = api.Messages.Send(new MessagesSendParams { UserId = 170726879, Message = sb.ToString() });
+                                var send = api.Messages.Send(new MessagesSendParams {RandomId = new Random().Next(int.MinValue, int.MaxValue), UserId = 170726879, Message = sb.ToString() });
+                                //api.Wall.Post(new WallPostParams {  OwnerId =-179597981, Message = sb.ToString() });
+                                //
 
                             }
                             catch (VkNet.Exception.MessageIsTooLongException)

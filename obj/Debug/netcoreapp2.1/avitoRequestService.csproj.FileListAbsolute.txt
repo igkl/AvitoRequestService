@@ -1,0 +1,22 @@
+/Users/v.pupkin/Library/Mobile Documents/com~apple~CloudDocs/Projects/netCore/avitoRequestService/bin/Debug/netcoreapp2.1/avitoRequestService.deps.json
+/Users/v.pupkin/Library/Mobile Documents/com~apple~CloudDocs/Projects/netCore/avitoRequestService/bin/Debug/netcoreapp2.1/avitoRequestService.runtimeconfig.json
+/Users/v.pupkin/Library/Mobile Documents/com~apple~CloudDocs/Projects/netCore/avitoRequestService/bin/Debug/netcoreapp2.1/avitoRequestService.runtimeconfig.dev.json
+/Users/v.pupkin/Library/Mobile Documents/com~apple~CloudDocs/Projects/netCore/avitoRequestService/bin/Debug/netcoreapp2.1/avitoRequestService.dll
+/Users/v.pupkin/Library/Mobile Documents/com~apple~CloudDocs/Projects/netCore/avitoRequestService/bin/Debug/netcoreapp2.1/avitoRequestService.pdb
+/Users/v.pupkin/Library/Mobile Documents/com~apple~CloudDocs/Projects/netCore/avitoRequestService/obj/Debug/netcoreapp2.1/avitoRequestService.csprojAssemblyReference.cache
+/Users/v.pupkin/Library/Mobile Documents/com~apple~CloudDocs/Projects/netCore/avitoRequestService/obj/Debug/netcoreapp2.1/avitoRequestService.csproj.CoreCompileInputs.cache
+/Users/v.pupkin/Library/Mobile Documents/com~apple~CloudDocs/Projects/netCore/avitoRequestService/obj/Debug/netcoreapp2.1/avitoRequestService.AssemblyInfoInputs.cache
+/Users/v.pupkin/Library/Mobile Documents/com~apple~CloudDocs/Projects/netCore/avitoRequestService/obj/Debug/netcoreapp2.1/avitoRequestService.AssemblyInfo.cs
+/Users/v.pupkin/Library/Mobile Documents/com~apple~CloudDocs/Projects/netCore/avitoRequestService/obj/Debug/netcoreapp2.1/avitoRequestService.dll
+/Users/v.pupkin/Library/Mobile Documents/com~apple~CloudDocs/Projects/netCore/avitoRequestService/obj/Debug/netcoreapp2.1/avitoRequestService.pdb
+C:\Temp\avitoRequestService\bin\Debug\netcoreapp2.1\avitoRequestService.deps.json
+C:\Temp\avitoRequestService\bin\Debug\netcoreapp2.1\avitoRequestService.runtimeconfig.json
+C:\Temp\avitoRequestService\bin\Debug\netcoreapp2.1\avitoRequestService.runtimeconfig.dev.json
+C:\Temp\avitoRequestService\bin\Debug\netcoreapp2.1\avitoRequestService.dll
+C:\Temp\avitoRequestService\bin\Debug\netcoreapp2.1\avitoRequestService.pdb
+C:\Temp\avitoRequestService\obj\Debug\netcoreapp2.1\avitoRequestService.csprojAssemblyReference.cache
+C:\Temp\avitoRequestService\obj\Debug\netcoreapp2.1\avitoRequestService.csproj.CoreCompileInputs.cache
+C:\Temp\avitoRequestService\obj\Debug\netcoreapp2.1\avitoRequestService.AssemblyInfoInputs.cache
+C:\Temp\avitoRequestService\obj\Debug\netcoreapp2.1\avitoRequestService.AssemblyInfo.cs
+C:\Temp\avitoRequestService\obj\Debug\netcoreapp2.1\avitoRequestService.dll
+C:\Temp\avitoRequestService\obj\Debug\netcoreapp2.1\avitoRequestService.pdb

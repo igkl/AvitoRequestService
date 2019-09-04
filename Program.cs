@@ -3,10 +3,7 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using HtmlAgilityPack;
 using System.Collections.Generic;
-using VkNet;
-using VkNet.Model;
-using VkNet.Enums.Filters;
-using VkNet.Model.RequestParams;
+
 using System.Threading;
 using System.Text;
 //using Selectors;
@@ -16,7 +13,7 @@ namespace avitoRequestService
     class Program
     {
 
-        private static VkApi api = new VkApi();
+        
 
 
 
@@ -31,22 +28,7 @@ namespace avitoRequestService
         static void Main(string[] args)
         {
             Random rand = new Random();
-            api.Authorize(new ApiAuthParams
-            {
-               
-                AccessToken = "13a3ebad7659c3a4e7a282228f6f98139605fc9d518a871632b9329611b48a04d85633d6eb"
-                
-            });
-            Console.WriteLine(api.Token);
-            //var res = api.Groups.Get(new GroupsGetParams());
-
-            // Console.WriteLine(res.TotalCount);
-            //api.Messages.Send(new MessagesSendParams { RandomId = new Random().Next(int.MinValue, int.MaxValue), PeerId=12335360, GroupId = 179597981, Message = "test" });
-            // api.Wall.Post(new WallPostParams
-            // {
-            //     
-
-            // });
+           
             while (true)
             {
                 ProcessRequestToAvito().Wait();
@@ -157,28 +139,16 @@ namespace avitoRequestService
 
                             try
                             {
-                                var send = api.Messages.Send(new MessagesSendParams {RandomId = new Random().Next(int.MinValue, int.MaxValue), UserId = 170726879, Message = sb.ToString() });
+                               // var send = api.Messages.Send(new MessagesSendParams {RandomId = new Random().Next(int.MinValue, int.MaxValue), UserId = 170726879, Message = sb.ToString() });
                                 //api.Wall.Post(new WallPostParams {  OwnerId =-179597981, Message = sb.ToString() });
+                                Console.WriteLine(sb.ToString());
 
                             }
-                            catch (VkNet.Exception.UserAuthorizationFailException)
-                            {
-                                Console.WriteLine("TOKEN EXEPTION");
-                                api.Authorize(new ApiAuthParams
-                                {
-                                    AccessToken = "13a3ebad7659c3a4e7a282605fc9d518a871632b93291b254de06d1611b48a04d85633d6eb"
-                                    
-                                });
-
-                                var send = api.Messages.Send(new MessagesSendParams {RandomId = new Random().Next(int.MinValue, int.MaxValue), UserId = 170726879, Message = sb.ToString() });
-                                //api.Wall.Post(new WallPostParams {  OwnerId =-179597981, Message = sb.ToString() });
-                                //
-
-                            }
-                            catch (VkNet.Exception.MessageIsTooLongException)
+                            
+                            catch ()
                             {
                                 products.Clear();
-                                Console.WriteLine("LONG MESSAGE !!!!!!!!!!!!");
+                                Console.WriteLine("Error: SB is empty!");
                             }
                             finally
                             {

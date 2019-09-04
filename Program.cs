@@ -34,7 +34,7 @@ namespace avitoRequestService
             api.Authorize(new ApiAuthParams
             {
                // ApplicationId = 6613950,
-                AccessToken = "13a3ebad7659c3a4e7a282228f6f98139605fc9d518a871632b93291b254de06d1611b48a04d85633d6eb"
+                AccessToken = "13a3ebad7659c3a4e7a282228f6f98139605fc9d518a871632b9329611b48a04d85633d6eb"
                 //Login = "79185584046",
                 //Password = "1v3.4c@&$",
                 //Settings = Settings.All

@@ -33,11 +33,9 @@ namespace avitoRequestService
             Random rand = new Random();
             api.Authorize(new ApiAuthParams
             {
-               // ApplicationId = 6613950,
+               
                 AccessToken = "13a3ebad7659c3a4e7a282228f6f98139605fc9d518a871632b9329611b48a04d85633d6eb"
-                //Login = "79185584046",
-                //Password = "1v3.4c@&$",
-                //Settings = Settings.All
+                
             });
             Console.WriteLine(api.Token);
             //var res = api.Groups.Get(new GroupsGetParams());
@@ -46,9 +44,7 @@ namespace avitoRequestService
             //api.Messages.Send(new MessagesSendParams { RandomId = new Random().Next(int.MinValue, int.MaxValue), PeerId=12335360, GroupId = 179597981, Message = "test" });
             // api.Wall.Post(new WallPostParams
             // {
-            //     OwnerId =-179597981,
-            //     FromGroup =true,
-            //     Message = "test"
+            //     
 
             // });
             while (true)
@@ -170,11 +166,8 @@ namespace avitoRequestService
                                 Console.WriteLine("TOKEN EXEPTION");
                                 api.Authorize(new ApiAuthParams
                                 {
-                                    AccessToken = "13a3ebad7659c3a4e7a282228f6f98139605fc9d518a871632b93291b254de06d1611b48a04d85633d6eb"
-                                    // ApplicationId = 6613950,
-                                    // Login = "79185584046",
-                                    // Password = "1v3.4c@&$",
-                                    // Settings = Settings.All
+                                    AccessToken = "13a3ebad7659c3a4e7a282605fc9d518a871632b93291b254de06d1611b48a04d85633d6eb"
+                                    
                                 });
 
                                 var send = api.Messages.Send(new MessagesSendParams {RandomId = new Random().Next(int.MinValue, int.MaxValue), UserId = 170726879, Message = sb.ToString() });

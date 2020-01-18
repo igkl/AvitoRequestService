@@ -13,10 +13,6 @@ namespace avitoRequestService
     class Program
     {
 
-        
-
-
-
         static char[] charsToTrim = { '*', ' ', '\n' };
 
         static HttpClientHandler handler = new HttpClientHandler() { MaxConnectionsPerServer = 2 };
@@ -89,12 +85,12 @@ namespace avitoRequestService
                             var dataType = node.GetAttributeValue("data-type", "1");
 
                             var id = node.Id;
-                            var link = node.SelectSingleNode(Selectors.link).GetAttributeValue("href", null);//.ChildNodes[1].ChildNodes[1].GetAttributeValue("href", null);
-                            var name = node.SelectSingleNode(Selectors.name).GetAttributeValue("title", null);
+                            var link = node.SelectSingleNode(Selectors.link).GetAttributeValue("href", "null");//.ChildNodes[1].ChildNodes[1].GetAttributeValue("href", null);
+                            var name = node.SelectSingleNode(Selectors.name).GetAttributeValue("title", "null");
                             var price = node.SelectSingleNode(Selectors.price).GetAttributeValue("content", "Цена не указанна"); ;
 
-                            var position = node.GetAttributeValue("data-position", null);
-                            var dateTime = node.SelectSingleNode(Selectors.dateTime).GetAttributeValue("data-absolute-date", null).dateTimeFromAvitoString(); // метод расширение для работы со строками даты время из авито
+                            var position = node.GetAttributeValue("data-position", "null");
+                            var dateTime = node.SelectSingleNode(Selectors.dateTime).GetAttributeValue("data-absolute-date", "null").dateTimeFromAvitoString(); // метод расширение для работы со строками даты время из авито
 
                             products.Add(new Product { IdFromAvito = id, Link = link, Name = name.Trim(charsToTrim), Price = price, Position = position, DataTime = dateTime, Age = "new", DataType = dataType });
 
@@ -145,7 +141,7 @@ namespace avitoRequestService
 
                             }
                             
-                            catch ()
+                            catch 
                             {
                                 products.Clear();
                                 Console.WriteLine("Error: SB is empty!");

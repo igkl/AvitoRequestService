@@ -20,3 +20,13 @@ C:\Temp\avitoRequestService\obj\Debug\netcoreapp2.1\avitoRequestService.Assembly
 C:\Temp\avitoRequestService\obj\Debug\netcoreapp2.1\avitoRequestService.AssemblyInfo.cs
 C:\Temp\avitoRequestService\obj\Debug\netcoreapp2.1\avitoRequestService.dll
 C:\Temp\avitoRequestService\obj\Debug\netcoreapp2.1\avitoRequestService.pdb
+c:\tmp\dotNet\AvitoRequestService\obj\Debug\netcoreapp2.1\avitoRequestService.csprojAssemblyReference.cache
+c:\tmp\dotNet\AvitoRequestService\obj\Debug\netcoreapp2.1\avitoRequestService.AssemblyInfoInputs.cache
+c:\tmp\dotNet\AvitoRequestService\obj\Debug\netcoreapp2.1\avitoRequestService.AssemblyInfo.cs
+c:\tmp\dotNet\AvitoRequestService\obj\Debug\netcoreapp2.1\avitoRequestService.dll
+c:\tmp\dotNet\AvitoRequestService\obj\Debug\netcoreapp2.1\avitoRequestService.pdb
+C:\tmp\dotNet\AvitoRequestService\bin\Debug\netcoreapp2.1\avitoRequestService.deps.json
+C:\tmp\dotNet\AvitoRequestService\bin\Debug\netcoreapp2.1\avitoRequestService.runtimeconfig.json
+C:\tmp\dotNet\AvitoRequestService\bin\Debug\netcoreapp2.1\avitoRequestService.runtimeconfig.dev.json
+C:\tmp\dotNet\AvitoRequestService\bin\Debug\netcoreapp2.1\avitoRequestService.dll
+C:\tmp\dotNet\AvitoRequestService\bin\Debug\netcoreapp2.1\avitoRequestService.pdb
